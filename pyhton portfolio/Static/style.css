@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+nav {
+    background-color: #4a6bff;
+    padding: 1rem;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+.hero {
+    display: flex;
+    padding: 2rem;
+    align-items: center;
+    background-color: #fff;
+}
+.hero .left {
+    flex: 1;
+}
+.hero .right {
+    flex: 1;
+    padding-left: 2rem;
+}
+.profile-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    animation: fadeIn 4s ease-in-out;
+}
+.typing {
+    font-size: 2.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #4a6bff;
+    width: 0;
+    animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: revealText 1.5s ease forwards;
+    animation-delay: 0.3s;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #4a6bff;
+    margin-bottom: 1rem;
+}
+@keyframes revealText {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+section {
+    padding: 2rem;
+}
+.project img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+.project img:hover {
+    transform: scale(1.05);
+}
+.project {
+    margin-bottom: 2rem;
+}
+
+/* Skills Bar */
+.skills-bar {
+    max-width: 600px;
+    margin: auto;
+}
+.skills-bar label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+.bar {
+    background-color: #ddd;
+    height: 25px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.progress {
+    height: 100%;
+    background-color: #4a6bff;
+    color: white;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 25px;
+    font-size: 14px;
+    animation: growBar 2s ease;
+}
+@keyframes growBar {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Scroll Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}

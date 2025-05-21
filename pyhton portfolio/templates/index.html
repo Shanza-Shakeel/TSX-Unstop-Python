@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shanza - Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="left">
+            <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Shanza" class="profile-img">
+        </div>
+        <div class="right">
+            <h1 class="typing">Hi, I'm Shanza</h1>
+            <h3>AI Engineer & Computer Vision Specialist</h3>
+            <p><strong>Email:</strong> shanzashakeel270@gmail.com</p>
+            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/shanza-shakeel-9a76932a42" target="_blank">profile</a></p>
+        </div>
+    </section>
+
+    <section id="about" class="reveal">
+        <h2 class="section-title">About Me</h2>
+        <p>
+            Computer Engineering graduate with specialization in AI/ML from the Institute of Space Technology. 
+            Gold medalist with 3.89/4.0 CGPA. Passionate about developing cutting-edge computer vision solutions 
+            and embedded systems for real-world applications. With a solid foundation in both software and hardware, 
+            I bring innovative solutions to life using AI, Python, and low-level embedded technologies.
+        </p>
+    </section>
+
+    <section id="skills" class="reveal">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-bar">
+            <label>Python</label>
+            <div class="bar"><div class="progress" style="width: 90%;">90%</div></div>
+            <label>AI/ML</label>
+            <div class="bar"><div class="progress" style="width: 95%;">95%</div></div>
+            <label>Computer Vision</label>
+            <div class="bar"><div class="progress" style="width: 85%;">85%</div></div>
+            <label>Embedded Systems</label>
+            <div class="bar"><div class="progress" style="width: 80%;">80%</div></div>
+            <label>Data Structures</label>
+            <div class="bar"><div class="progress" style="width: 85%;">85%</div></div>
+        </div>
+    </section>
+
+    <section id="projects" class="reveal">
+        <h2 class="section-title">Projects</h2>
+        <div class="project">
+            <h3>Jet Detection System</h3>
+            <img src="{{ url_for('static', filename='jet_detection.jpg') }}" alt="Jet Detection">
+            <p>
+                A real-time jet detection system using YOLOv6 and OpenCV. 
+                This system can identify and track jets in aerial footage with up to 92% accuracy. 
+                Integrated with SORT tracker and OpenCV for smooth and continuous tracking performance in varying environments.
+            </p>
+        </div>
+        <div class="project">
+            <h3>RFID Parking System</h3>
+            <img src="{{ url_for('static', filename='rfid_parking.jpg') }}" alt="RFID Parking">
+            <p>
+                An automated parking system built using Arduino and RFID modules. 
+                This system enables contactless vehicle entry/exit, logging all entries in real-time. 
+                Reduced entry time by 70%, providing an efficient and scalable solution for modern smart cities.
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="reveal">
+        <h2 class="section-title">Contact Me</h2>
+        <p>Email: shanzashakeel270@gmail.com</p>
+        <p>Phone: (+92) 3195025857</p>
+    </section>
+
+    <script src="{{ url_for('static', filename='scroll.js') }}"></script>
+</body>
+</html>
